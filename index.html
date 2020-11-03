@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html lang="en" class="theme-light">
+    <head>
+        <title>Griff's Template</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="MyCss.css">   
+    </head>
+    <body>
+    <header>
+        Griffin the Web Developer
+        <div class="container">
+        <button id="switch" onclick="toggleTheme()">Switch Theme</button>
+        </div>
+        <script>
+        // function to set a given theme/color-scheme
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // function to toggle between light and dark theme
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-light');
+            } else {
+                setTheme('theme-dark');
+            }
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-dark');
+            } else {
+                setTheme('theme-light');
+            }
+        })();
+    </script>
+    </header>
+<div>      
+ <ul class="topnav">
+  <li><a class="active" >Home</a></li>
+  <li><a>Images</a></li>
+  <li><a>About</a></li>
+  <li class="right"><a >Contact</a></li>
+</ul>
+</div>  
+        <h2 class="title">What is Lorem Ipsum?</h2>
+        <p class="content">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        </body>
+    <footer>
+        <p>Author: Griffin Domino AKA <a href="https://www.instagram.com/_yungaddy_/?hl=en">@_yungaddy_</a> </p>
+  <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+    </footer>
+
+</html>

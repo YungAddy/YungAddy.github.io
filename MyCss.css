@@ -1,0 +1,71 @@
+.theme-light { /* Crimson Hues */
+    --headercolor: #420e53;
+    --footercolor:#420e53;
+    --navactive: #941963;
+    --bgcolor: #e1674c;
+    --fontcolor: white;
+    --notactive: #cb2233;
+    --navbgcolor: #f3deba;
+}
+.theme-dark { /* Spanish Sunset */
+    --headercolor: #a02f40;
+    --footercolor: #a02f40;
+    --navactive: #fd724e;
+    --bgcolor: #f5ddbc;
+    --fontcolor: black;
+    --notactive: #fabb64;
+    --navbgcolor: #5f2f45;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+    color: var(--fontcolor);
+    background-color: var(--bgcolor);
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+}
+
+/* Style the header */
+header {
+  background-color: var(--headercolor);
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* The overflow is clipped, and the rest of the content will be invisible */
+  background-color: var(--navbgcolor);
+} /* Hover attribute is hidden */
+
+ul.topnav li {float: left;} /* 3 links are to the right */
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} /* words and blocks in Navigation bar */
+
+ul.topnav li a:hover:not(.active) {background-color: var(--notactive);} /* Color when you hover over NavLink when page is not active */
+
+ul.topnav li a.active {background-color: var(--navactive);} /* Shows Color when page is active */
+
+ul.topnav li.right {float: right;} /* Keeps 'theme' to the right */
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}   
+}
+/* Style the footer */
+footer {
+  background-color: var(--footercolor);
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
